@@ -2,9 +2,10 @@ require './lib/passenger.rb'
 require './lib/vehicle.rb'
 
 class Park
-    attr_reader :admission, :vehicles_in
+    attr_reader :name, :admission, :vehicles_in
 
-    def initialize(admission)
+    def initialize(name, admission)
+        @name = name
         @admission = admission
         @vehicles_in = []
     end

@@ -33,4 +33,16 @@ class Vehicle
         count
     end
 
+    # def num_adults
+    #     @passengers.find_all do |passenger|
+    #         passenger.adult?
+    #     end.count
+    # end
+
+    # def num_adults
+    #     @passengers.count do |passenger|
+    #         passenger.adult?
+    #     end
+    # end
+    
 end
