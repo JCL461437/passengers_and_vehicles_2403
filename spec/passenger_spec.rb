@@ -19,3 +19,9 @@ RSpec.describe Passenger do
         end
 
         it "has a date" do
+
+        end
+
+    end
+
+end
