@@ -10,11 +10,11 @@ class Park
     end
 
     def add_vehicle_to_park(vehicle)
-        @vehicle_in << vehicle
+        @vehicles_in << vehicle
     end
 
     def num_vehicles_in
-       @vehicle_in.count
+       @vehicles_in.count
     end
 
 end
