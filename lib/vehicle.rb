@@ -1,3 +1,5 @@
+require './lib/passenger.rb'
+
 class Vehicle
     attr_reader :year, :make, :model, :speeding, :passengers
 
@@ -19,6 +21,16 @@ class Vehicle
 
     def add_passenger(passenger)
         @passengers << passenger
+    end
+
+    def num_adults
+        count = 0
+        @passengers.each do |passenger|
+            if passenger.adult?
+                count += 1
+            end
+        end
+        count
     end
 
 end
