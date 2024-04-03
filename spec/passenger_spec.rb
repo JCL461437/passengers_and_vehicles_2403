@@ -15,11 +15,14 @@ RSpec.describe Passenger do
             taylor = Passenger.new({"name" => "Taylor", "age" => 12})
 
             expect(charlie).to be_an_instance_of(Passenger)
-            expect(charlie).to be_an_instance_of(Passenger)
+            expect(taylor).to be_an_instance_of(Passenger)
         end
 
-        it "has a date" do
+        it "has a name" do
+            charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+            taylor = Passenger.new({"name" => "Taylor", "age" => 12})
 
+            expect(charlie.name).to eq("Charlie")
         end
 
     end
