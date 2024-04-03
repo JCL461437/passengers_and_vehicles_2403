@@ -20,22 +20,22 @@ RSpec.describe Park do
         it 'has an name' do
             yosemite = Park.new("Yosemite", 20.0)
 
-            expect(yosemite.name).to eq ("Yosemite")
+            expect(yosemite.name).to eq("Yosemite")
         end
 
         it 'has an admission price' do
             yosemite = Park.new("Yosemite", 20.0)
 
-            expect(yosemite.admission).to eq (20.0)
+            expect(yosemite.admission).to eq(20.0)
         end
     end
 
     describe '#add_vehicle_to_park' do
     
         it 'can add vehicles' do
+            yosemite = Park.new("Yosemite", 20.0)
             vehicle_1 = Vehicle.new("2001", "Honda", "Civic")
-            vehicle_2 = Vehicle.new("2020", "Honda", "Pilot")
-            yosemite = Park.new(150)
+            vehicle_2 = Vehicle.new("2010", "Toyota", "Tacoma")
 
             expect(yosemite.vehicles_in).to eq([])
 
