@@ -11,4 +11,6 @@ class Passenger
         @age >= 18
     end
 
+    
+
 end
