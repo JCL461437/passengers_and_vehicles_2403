@@ -1,6 +1,7 @@
 require 'rspec'
 require './lib/passenger.rb'
 require './lib/vehicle.rb'
+require './lib/park.rb'
 require 'pry'
 
 RSpec.configure do |config|
@@ -8,7 +9,6 @@ RSpec.configure do |config|
 end
 
 RSpec.describe Park do
-    #   before(:each) do
    
     describe '#initialize' do
         it 'can initialize' do
@@ -21,6 +21,29 @@ RSpec.describe Park do
             yosemite = Park.new(150)
 
             expect(yosemite.admission).to eq (150)
+        end
+    end
+
+    describe '#add_vehicle_to_park' do
+    
+        it 'has an admission price' do
+            it 'can add passengers' do
+                vehicle_1 = Vehicle.new("2001", "Honda", "Civic")
+                vehicle_2 = Vehicle.new("2020", "Honda", "Pilot")
+                yosemite = Park.new(150)
+    
+                expect(park.vehicles_in).to eq([])
+    
+                park.add_vehicle_to_park(vehicle_1)
+    
+                expect(park.vehicles_in).to eq([vehicle_1])
+    
+                park.add_vehicle_to_park(vehicle_2)
+
+                expect(park.vehicles_in).to eq([vehicle_1,vehicle_2])
+            end
+    
+
         end
     end
 
