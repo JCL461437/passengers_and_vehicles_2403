@@ -36,4 +36,13 @@ RSpec.describe Passenger do
 
     end
 
+    describe '#adult?' do
+        it 'can determine if passenger is an adult' do
+            charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+            taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+
+            expect(charlie.adult?).to be true
+            expect(taylor.adult?).to be false
+        end
+    end
 end
