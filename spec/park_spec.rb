@@ -49,6 +49,39 @@ RSpec.describe Park do
         end
     end
 
+    describe '#passengers'
+        it "can list all passengers"
+            yosemite = Park.new("Yosemite", 20.0)
+            honda = Vehicle.new("2001", "Honda", "Civic")
+            tacoma = Vehicle.new("2010", "Toyota", "Tacoma")
+            ford = Vehicle.new("2010", "Ford", "F-150")
+
+            charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+            jude = Passenger.new({"name" => "Jude", "age" => 20})  
+            taylor = Passenger.new({"name" => "Taylor", "age" => 12})  
+            bob = Passenger.new({"name" => "Bob", "age" => 53})  
+            gina = Passenger.new({"name" => "Gine", "age" => 2})  
+
+            honda.add_passenger(charlie)
+            toyota.add_passenger(jude)
+            toyota.add_passenger(taylor)
+            ford.add_passenger(bob)
+            ford.add_passenger(gina)
+
+            park.add_vehicle_to_park(honda)
+            park.add_vehicle(toyota)
+            park.add_vehicle(ford)
+
+            expected = [charlie, jude, gina, bob, taylor] #order matters, see how we added vehicles
+
+            expect(yosemite.passengers).to eq(expected)
+        end
+
+
+
+
+    end 
+
 
 
 end
